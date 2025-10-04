@@ -4,19 +4,25 @@ import { Link } from "react-router-dom";
 
 const BottomBar = () => {
   return (
-    <div className="absolute bottom-0 flex justify-evenly p-4 bg-blue-200 w-full">
-      <div className="flex flex-col items-center space-y-2 font-medium">
+    <div className="absolute bottom-0 flex lg:hidden justify-evenly p-4 bg-blue-200 w-full">
+      <Link to="/" className="flex flex-col items-center space-y-2 font-medium">
         <AiFillHome size={32} />
-        <Link to="/">Home</Link>
-      </div>
-      <div className="flex flex-col items-center space-y-2 font-medium">
+        Home
+      </Link>
+      <Link
+        to="/product"
+        className="flex flex-col items-center space-y-2 font-medium"
+      >
         <AiFillProduct size={32} />
-        <Link to="/product">Produc</Link>
-      </div>
-      <div className="flex flex-col items-center space-y-2 font-medium">
+        Product
+      </Link>
+      <Link
+        to="/contact"
+        className="flex flex-col items-center space-y-2 font-medium"
+      >
         <FaSquarePhone size={32} />
-        <Link to="/contact">Contact</Link>
-      </div>
+        Contact
+      </Link>
     </div>
   );
 };
