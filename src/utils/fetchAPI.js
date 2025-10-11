@@ -1,8 +1,9 @@
-import axios from "axios"
+import axios from "axios";
 
 const fetchAPI = async () => {
-  const response = await axios("https://friday-json.onrender.com/product")
-  return response.data;
-}
+  const response = await axios("https://friday-json.onrender.com/product");
 
-export default fetchAPI
+  return response.data;
+};
+
+export default fetchAPI;

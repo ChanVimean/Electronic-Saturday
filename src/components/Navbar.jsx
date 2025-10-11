@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { IoSunny  } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
+import { ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
 
@@ -31,7 +32,9 @@ const Navbar = () => {
           <button onClick={toggleTheme} className="text-2xl cursor-pointer">
             {theme === "dark" ? <IoSunny /> : <IoIosMoon />}
           </button>
-          <button>Cart</button>
+          <Link to="/cart">
+            <ShoppingCart />
+          </Link>
         </section>
       </div>
     </nav>
